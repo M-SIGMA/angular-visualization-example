@@ -1,0 +1,15 @@
+@font-face {
+    @include register-font($font-lato-bold, 'lato-bold');
+}
+
+@font-face {
+    @include register-font($font-lato-light, 'lato-light');
+}
+
+@font-face {
+    @include register-font($font-lato-regular, 'lato-regular');
+}
+
+@font-face {
+    @include register-font($font-lato-thin, 'lato-thin');
+}

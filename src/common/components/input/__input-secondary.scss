@@ -1,0 +1,41 @@
+@mixin input-secondary-states() {
+
+    input,
+    textarea {
+        color: $color-white;
+        border-color: $color-bali-hai;
+
+        &.ng-dirty.ng-invalid {
+            border-color: $color-vermilion;
+        }
+
+        &:-moz-placeholder {
+            color: $color-bali-hai;
+        }
+
+        &::-moz-placeholder {
+            color: $color-bali-hai;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-bali-hai;
+        }
+    }
+
+    label {
+        color: lighten($color-bali-hai, 10%);
+    }
+
+    + .input-validation {
+        color: $color-vermilion;
+    }
+}
+
+%input-secondary {
+    @include input();
+    @include input-secondary-states();
+}
+
+.input-secondary {
+    @extend %input-secondary;
+}

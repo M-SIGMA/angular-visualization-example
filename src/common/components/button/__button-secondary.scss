@@ -1,0 +1,21 @@
+@mixin btn-secondary-states() {
+    background-color: $color-white;
+    color: $color-ebony-clay;
+
+    &:active,
+    &:focus,
+    &.activated,
+    &.focused {
+        background-color: darken($color-white, 10%);
+        color: $color-ebony-clay;
+    }
+}
+
+%btn-secondary {
+    @include btn();
+    @include btn-secondary-states();
+}
+
+.btn-secondary {
+    @extend %btn-secondary;
+}

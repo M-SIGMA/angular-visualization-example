@@ -1,0 +1,25 @@
+@mixin btn-social-states($background-color, $color: $color-white) {
+    color: $color;
+    background-color: $background-color;
+
+    &:hover,
+    &:active {
+        background-color: lighten($background-color, 10%);
+        color: $color;
+    }
+}
+
+%btn-social {
+    @include btn();
+    vertical-align: middle;
+}
+
+.btn-social--facebook {
+    @extend %btn-social;
+    @include btn-social-states(#3B5998);
+}
+
+.btn-social--googleplus {
+    @extend %btn-social;
+    @include btn-social-states(#D34836);
+}

@@ -1,0 +1,41 @@
+@mixin input-primary-states() {
+
+    input,
+    textarea {
+        color: $color-ebony-clay;
+        border-color: $color-ebony-clay;
+
+        &.ng-dirty.ng-invalid {
+            border-color: $color-vermilion;
+        }
+
+        &:-moz-placeholder {
+            color: $color-ebony-clay;
+        }
+
+        &::-moz-placeholder {
+            color: $color-ebony-clay;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-ebony-clay;
+        }
+    }
+
+    label {
+        color: lighten($color-ebony-clay, 10%);
+    }
+
+    + .input-validation {
+        color: $color-vermilion;
+    }
+}
+
+%input-primary {
+    @include input();
+    @include input-primary-states();
+}
+
+.input-primary {
+    @extend %input-primary;
+}

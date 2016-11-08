@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="AppCtrl" lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <title ng-bind="meta.title"></title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en_GB">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ meta.description }}">
+    <meta name="keywords" content="{{ meta.keywords }}">
+    <link rel="canonical" href="{{ meta.canonical }}" ng-if="meta.canonical">
+
+    <!-- icons -->
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- device browser tags -->
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- social media tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="{{ ::meta.description }}">
+    <meta name="twitter:image:src" content="{{ ::meta.image }}">
+    <meta name="twitter:title" content="{{ meta.title }}">
+    <meta name="twitter:url" content="{{ meta.canonical || meta.url }}">
+    <meta property="og:description" content="{{ meta.description }}">
+    <meta property="og:image" content="{{ meta.image }}"/>
+    <meta property="og:title" content="{{ meta.title }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="{{ meta.canonical || meta.url }}"/>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" type="text/css" href="/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/vendor.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/app.css"/>
+
+    <!-- Environment variables -->
+    <script type="text/javascript" src="js/env.js"></script>
+
+    <!-- base scripts (AngularJS and key components) -->
+    <script type="text/javascript" src="/js/base.js"></script>
+
+    <!-- Common cross-project scripts -->
+    <script type="text/javascript" src="/js/common.js"></script>
+
+    <!-- Project specific scripts -->
+    <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body class="app" tabIndex="-1" role="application" ng-cloak>
+<!-- Site header directive -->
+<site-header class="site-header"></site-header>
+
+<!-- Site main container (containing UI view) -->
+<main class="container" ui-view="main" role="main"></main>
+
+<!-- Site footer directive -->
+<site-footer class="site-footer"></site-footer>
+
+<!-- Non-vital third-party scripts -->
+<script type="text/javascript" async src="/js/vendor.js"></script>
+</body>
+</html>

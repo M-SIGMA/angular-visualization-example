@@ -1,0 +1,60 @@
+@mixin btn($font-size: 1em) {
+    border: 1px solid transparent;
+    border-radius: 1px;
+    background: transparent;
+
+    display: inline-block;
+    font-family: $font-lato-regular;
+    font-size: $font-size;
+    min-width: 60px;
+    min-height: 40px;
+    padding: 1em .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color .3s ease-in-out,
+                border-color .3s ease-in-out,
+                box-shadow .3s ease-in-out,
+                color .3s ease-in-out,
+                opacity .3s ease-in-out;
+    user-select: none;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+
+    &:disabled {
+        box-shadow: none;
+        opacity: .9;
+    }
+}
+
+%btn {
+    @include btn();
+}
+
+%btn-icon {
+    display: inline-block;
+    padding: 0;
+    font-size: 1.2em;
+    vertical-align: inherit;
+    pointer-events: none;
+}
+
+.btn-icon-left {
+    &:before {
+        @extend %btn-icon;
+        float: left;
+        padding-right: 0.2em;
+        padding-left: 0;
+    }
+}
+
+.btn-icon-right {
+    &:before {
+        @extend %btn-icon;
+        float: right;
+        padding-right: 0;
+        padding-left: 0.2em;
+    }
+}

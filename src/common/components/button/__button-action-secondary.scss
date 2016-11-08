@@ -1,0 +1,28 @@
+@mixin btn-action-secondary-states() {
+    background-color: $color-lynch;
+    color: $color-white;
+
+    &:active,
+    &:focus,
+    &.activated,
+    &.focused {
+        background-color: lighten($color-lynch, 10%);
+        color: $color-white;
+    }
+}
+
+%btn-action-secondary {
+    @include btn-action();
+    @include btn-action-secondary-states();
+}
+
+.btn-action-secondary {
+    @extend %btn-action-secondary;
+}
+
+/* Fixed width action buttons */
+.item-options {
+    .btn-action-secondary {
+        width: 5em;
+    }
+}

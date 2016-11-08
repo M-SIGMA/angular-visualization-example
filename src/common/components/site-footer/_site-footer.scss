@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    #SITE-FOOTER
+\*------------------------------------*/
+
+.site-footer {
+    position: relative;
+    width: 100%;
+    padding: .5em 0;
+    background: $color-ebony-clay;
+    color: #FFF;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, .25);
+}
+
+    .site-footer__link {
+        color: $color-white;
+        text-decoration: none;
+        transition: color .3s ease-in-out;
+
+        &:hover {
+            color: darken($color-white, 10%);
+        }
+    }

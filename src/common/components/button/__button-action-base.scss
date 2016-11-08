@@ -1,0 +1,25 @@
+@mixin btn-action($font-size: 1em) {
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background: transparent;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: $font-lato-regular;
+    font-size: $font-size;
+    min-width: 60px;
+    padding: 0 1em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .3s ease-in-out,
+                border-color .3s ease-in-out,
+                color .3s ease-in-out;
+    user-select: none;
+    cursor: pointer;
+}
+
+%btn-action {
+    @include btn-action();
+}

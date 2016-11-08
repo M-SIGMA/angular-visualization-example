@@ -1,0 +1,24 @@
+@mixin register-font($font-name, $font-file-name) {
+    $font-root-dir: '../fonts/';
+    $font-file-path: $font-name + '/' + $font-file-name;
+
+    font-family: $font-name;
+    src: url($font-root-dir + $font-file-path + '.otf') format('opentype'),
+         url($font-root-dir + $font-file-path + '.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin listed-item($items-per-row: 3, $gutter-size: 2%) {
+    $items-width: (100% - (($items-per-row - 1) * $gutter-size)) / $items-per-row;
+
+    float: left;
+    width: $items-width;
+    margin-left: $gutter-size;
+    clear: none;
+
+    &:nth-of-type(#{$items-per-row}n+1) {
+        clear: left;
+        margin-left: 0;
+    }
+}

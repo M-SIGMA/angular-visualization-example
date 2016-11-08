@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    #SITE-HEADER
+\*------------------------------------*/
+
+.site-header {
+    position: relative;
+    min-height: 24px;
+    width: 100%;
+    padding: 1em;
+    font-size: 1.4em;
+    background: $color-ebony-clay;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+    z-index: 3;
+    transform: translate3d(0, 0, 0);
+}
+
+    .site-header__nav-item {
+        margin-right: 1em;
+        color: $color-white;
+        text-decoration: none;
+        transition: color .3s ease-in-out;
+
+        &:hover {
+            color: darken($color-white, 10%);
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }

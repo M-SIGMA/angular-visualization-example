@@ -1,0 +1,81 @@
+/*------------------------------------*\
+    #GLOBAL
+\*------------------------------------*/
+
+html,
+body {
+    font-family: $font-lato-regular;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+
+
+
+
+/*------------------------------------*\
+    #HEADING
+\*------------------------------------*/
+
+%h1 {
+    font-size: 1.6em;
+}
+
+h1,
+.h1 {
+   @extend %h1;
+}
+
+%h2 {
+    font-size: 1.4em;
+}
+
+h2,
+.h2 {
+    @extend %h2;
+}
+
+%h3 {
+    font-size: 1.2em;
+}
+
+h3,
+.h3 {
+    @extend %h3;
+}
+
+%h4 {
+    font-size: 1em;
+}
+
+h4,
+.h4 {
+    @extend %h4;
+}
+
+%h5 {
+    font-size: 0.8em;
+}
+
+h5,
+.h5 {
+    @extend %h5;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #OTHER
+\*------------------------------------*/
+
+%a {
+    text-decoration: none;
+}
+
+a,
+.a {
+    @extend %a;
+}

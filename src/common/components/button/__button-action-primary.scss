@@ -1,0 +1,21 @@
+@mixin btn-action-primary-states() {
+    background-color: $color-vermilion;
+    color: $color-white;
+
+    &:active,
+    &:focus,
+    &.activated,
+    &.focused {
+        background-color: lighten($color-vermilion, 10%);
+        color: $color-white;
+    }
+}
+
+%btn-action-primary {
+    @include btn-action();
+    @include btn-action-primary-states();
+}
+
+.btn-action-primary {
+    @extend %btn-action-primary;
+}

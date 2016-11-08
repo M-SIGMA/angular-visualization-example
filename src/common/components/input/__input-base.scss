@@ -1,0 +1,75 @@
+@mixin input($font-size: .9em) {
+    $input-minimum-height: 40px;
+
+    position: relative;
+    font-family: $font-lato-regular;
+    box-sizing: border-box;
+
+    input,
+    textarea {
+        display: block;
+        min-height: $input-minimum-height;
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid $color-ebony-clay;
+        padding: .5em .8em;
+        margin: 0 0 .5em;
+        background: transparent;
+        appearance: none;
+        transition: .3s ease background-color,
+                    .3s ease border-color,
+                    .3s ease color;
+
+        &[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        &[type="number"]::-webkit-inner-spin-button,
+        &[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &:focus,
+        &.focus,
+        &:valid,
+        &.valid,
+        &.ng-valid {
+            outline: none;
+        }
+
+        &:focus ~ label,
+        &.focus ~ label,
+        &.ng-not-empty ~ label {
+            top: (-$input-minimum-height / 2);
+            font-size: .8em;
+        }
+    }
+
+    label {
+        color: $color-ebony-clay;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: .3s ease all;
+    }
+
+    input:focus ~ .highlight:before,
+    input:focus ~ .highlight:after {
+        width:50%;
+    }
+
+    + .input-validation {
+        margin: 0 0 .5em;
+    }
+
+    .cloned-text-input {
+        display: none !important;
+    }
+}
+
+%input {
+    @include input();
+}

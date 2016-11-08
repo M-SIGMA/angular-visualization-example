@@ -1,0 +1,17 @@
+# Dependencies
+/node_modules/
+/vendor/
+
+# Distributed files
+/dist/
+
+# IDEs
+/.idea/
+/nbproject/private/
+/*.iml
+
+# OSX
+.DS_Store
+
+# Logs
+logs/
