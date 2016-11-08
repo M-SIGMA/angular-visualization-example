@@ -9,6 +9,9 @@ angular
     // Common modules
     'common.site-footer',
     'common.site-header',
+    'common.bar-chart',
+    'common.histogram-chart',
+    'common.line-chart',
 
     // App specific modules
     'app.home'
