@@ -34,7 +34,8 @@ module.exports = {
       'vendor/angular-resource/angular-resource.js',
       'vendor/angular-sanitize/angular-sanitize.js',
       'vendor/angular-ui-router/release/angular-ui-router.js',
-      'vendor/angular-ui-utils/modules/route/route.js'
+      'vendor/angular-ui-utils/modules/route/route.js',
+      'vendor/d3/d3.js'
     ],
     styles: [
       'src/common/base/*.scss'
