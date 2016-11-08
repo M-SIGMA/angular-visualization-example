@@ -8,6 +8,9 @@ module.exports = {
     ],
     fonts: [
       'src/assets/font/**/*'
+    ],
+    data: [
+      'src/assets/data/**/*.{csv,tsv}'
     ]
   },
 
