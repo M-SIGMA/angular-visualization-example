@@ -15,7 +15,7 @@ angular
   ]);
 
 angular
-  .module('homyze.app')
+  .module('app')
   .config(AppConfig)
   .run(AppRun)
   .constant('ngAppSettings', AppSettings());
